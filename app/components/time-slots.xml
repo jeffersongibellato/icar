@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns="http://schemas.nativescript.org/tns.xsd">
+    <StackLayout class="p-4">
+        <Label text="Available Time Slots" class="text-xl font-bold mb-4" />
+        <Repeater items="{{ timeSlots }}">
+            <Repeater.itemTemplate>
+                <Button text="{{ time }}" 
+                        tap="{{ $parents['Repeater'].onTimeSlotTap }}"
+                        class="{{ isSelected ? 'bg-blue-500 text-white' : 'bg-gray-200' }} mb-2 p-4 rounded-lg" />
+            </Repeater.itemTemplate>
+        </Repeater>
+    </StackLayout>
+</ScrollView>

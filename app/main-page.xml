@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+    <ActionBar title="Sunset Car Wash" class="bg-blue-500 text-white" />
+    
+    <ScrollView>
+        <StackLayout class="p-4">
+            <Image src="~/images/carwash-banner.jpg" class="w-full h-48 rounded-lg mb-4" stretch="aspectFill" />
+            
+            <Label text="Sunset Car Wash" class="text-2xl font-bold mb-2" />
+            <StackLayout class="flex-row items-center mb-4">
+                <Label text="★★★★☆" class="text-yellow-500" />
+                <Label text="4.8" class="ml-2" />
+                <Label text="(245 reviews)" class="text-gray-500 ml-2" />
+            </StackLayout>
+            
+            <Label text="Description" class="text-xl font-bold mb-2" />
+            <Label text="Professional car wash services with attention to detail. We offer interior and exterior cleaning, waxing, and premium detailing packages." class="text-gray-600 mb-4" textWrap="true" />
+            
+            <TabView selectedTabTextColor="#3b82f6" tabTextFontSize="16">
+                <TabViewItem title="Book">
+                    <TabViewItem.view>
+                        <StackLayout>
+                            <include src="~/components/booking-calendar" />
+                            <include src="~/components/time-slots" />
+                            <Button text="Book Appointment" tap="{{ onBookTap }}" class="bg-blue-500 text-white p-4 rounded-lg mt-4" />
+                        </StackLayout>
+                    </TabViewItem.view>
+                </TabViewItem>
+                <TabViewItem title="Location">
+                    <TabViewItem.view>
+                        <include src="~/components/location-map" />
+                    </TabViewItem.view>
+                </TabViewItem>
+            </TabView>
+        </StackLayout>
+    </ScrollView>
+</Page>

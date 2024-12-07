@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StackLayout xmlns="http://schemas.nativescript.org/tns.xsd" class="p-4">
+    <Label text="{{ currentMonth }}" class="text-xl font-bold mb-2" />
+    <GridLayout rows="auto, auto" columns="*, *, *, *, *, *, *" class="mb-4">
+        <Label text="Sun" col="0" class="text-center text-gray-500" />
+        <Label text="Mon" col="1" class="text-center text-gray-500" />
+        <Label text="Tue" col="2" class="text-center text-gray-500" />
+        <Label text="Wed" col="3" class="text-center text-gray-500" />
+        <Label text="Thu" col="4" class="text-center text-gray-500" />
+        <Label text="Fri" col="5" class="text-center text-gray-500" />
+        <Label text="Sat" col="6" class="text-center text-gray-500" />
+    </GridLayout>
+    <ListView items="{{ calendarDays }}" class="mb-4">
+        <ListView.itemTemplate>
+            <GridLayout columns="*, *, *, *, *, *, *">
+                <Repeater items="{{ week }}">
+                    <Repeater.itemTemplate>
+                        <StackLayout tap="{{ $parents['ListView'].onDayTap }}" class="p-2">
+                            <Label text="{{ day }}" class="text-center {{ isCurrentMonth ? '' : 'text-gray-400' }} {{ isSelected ? 'font-bold text-blue-500' : '' }}" />
+                        </StackLayout>
+                    </Repeater.itemTemplate>
+                </Repeater>
+            </GridLayout>
+        </ListView.itemTemplate>
+    </ListView>
+</StackLayout>
