@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { ArrowLeftIcon, HeartIcon } from '@heroicons/react/24/outline';
-import sunsetcarheader from './sunsetcarheader.png'
+import secaolava from '../secaolava.png'
+import logoselo from '../logoselo.png'
 const Header = () => {
   return (
     <div className="relative">
@@ -15,12 +16,13 @@ const Header = () => {
         </button>
       </div>
       <div className="relative h-30" >
-        <img src= {sunsetcarheader} alt=""/>
+        <img src= {secaolava}style={{width:'100%', height:300}} alt=""/>
       </div>
       <div className="p-4">
         <div className="flex justify-between items-start">
-          <h1 className="text-2xl font-bold">SUNSET CAR WASH</h1>
+          <h1 className="text-2xl font-bold">Lava-Rápido SmartCity</h1>
           <span className="text-orange-500 font-semibold">4,8 Km</span>
+          <img src={logoselo} style={{width:50, height:50}}></img>
         </div>
         <div className="flex items-center mt-1">
           <div className="flex text-yellow-400">

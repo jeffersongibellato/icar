@@ -30,11 +30,11 @@ function App() {
   const [activeTab, setActiveTab] = useState('agendamento');
   const [agendamentoTab, setAgendamentoTab] = useState(1);
   const [selectedTime, setSelectedTime] = useState('08:50');
-  const [selectedLocation, setSelectedLocation] = useState('quick');
+  const [selectedLocation, setSelectedLocation] = useState('Lava Rápido');
   const [selectedMyLocation, setSelectedMyLocation] = useState('Minha Casa');
-  const [selectedWashType, setSelectedWashType] = useState('internal');
-  const [selectedCar, setSelectedCar] = useState('f40');
-  const [selectedPayment, setSelectedPayment] = useState('credit');
+  const [selectedWashType, setSelectedWashType] = useState('Interno');
+  const [selectedCar, setSelectedCar] = useState('Civic Type R');
+  const [selectedPayment, setSelectedPayment] = useState('Crédito');
   const [dateTemplate, setDateTemplate]= useState('12/12');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [nomeLavaRapido, setNomeLavaRapido] = useState(null);
@@ -185,7 +185,7 @@ function App() {
                <span className="text-gray-900">{selectedCar}</span>
              </div>
            </div>
-             <h2 className="text-lg font-semibold mb-4">Selecione o seu carro</h2>
+             <h2 className="text-lg font-semibold mb-4">Selecione a forma de pagamento</h2>
         <div className="space-y-2">
           {paymentOptions.map((option) => (
             <PaymentOption
