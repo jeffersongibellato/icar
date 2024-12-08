@@ -3,7 +3,6 @@ import React from 'react';
 const Location = () => {
   return (
     <div className="p-4 bg-white rounded-lg shadow-md">
-      <h2 className="text-xl font-bold mb-4">Location</h2>
       <div className="w-full h-48 bg-gray-200 rounded-lg mb-4">
         {/* Map placeholder */}
         <div className="w-full h-full flex items-center justify-center text-gray-500">
